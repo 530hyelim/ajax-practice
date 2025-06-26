@@ -1,5 +1,6 @@
 package com.kh.board.model.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Board {
@@ -47,15 +48,14 @@ public class Board {
 		this.nickname = nickname;
 	}
 
-	public Date getCreateDate() {
-		return createDate;
+	public String getCreateDate() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		return sdf.format(createDate);
 	}
 
 	public void setCreateDate(Date createDate) {
 		this.createDate = createDate;
 	}
-
-	
 	
 	public String getContent() {
 		return content;
