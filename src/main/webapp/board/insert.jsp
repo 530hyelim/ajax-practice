@@ -22,4 +22,10 @@
 		</th>
 	</tr>
 </table>
-
+<script>
+	$(function() {
+		$("#btn").click(function()) {
+			
+		};
+	});
+</script>

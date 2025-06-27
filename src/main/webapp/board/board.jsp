@@ -24,7 +24,9 @@
 		$(function() {
 			$("#list").click(function() {
 				$.ajax({
-					url : "/ajax/board/list",
+					url : "<%=request.getContextPath()%>/board/list",
+					method : "get",
+					dataType : "html",
 					/* data : {
 						list : "${list}"
 					}, 이렇게 작성하면 처음 페이지가 로드될 때의 list 데이터를 가져와서 
@@ -39,7 +41,21 @@
 				});
 			});
 		});
+		$(function() {
+			$("#insert").click(function() {
+				$.ajax({
+					url : "<%=request.getContextPath()%>/board/insert",
+					method : "get",
+					dataType : "html",
+					success : function(data) {
+						$(".outer").html(data);
+					},
+					error : function(xhr) {
+						console.log(xhr)
+					}
+				});
+			});
+		});
 	</script>
-
 </body>
 </html>

@@ -48,9 +48,10 @@ public class Board {
 		this.nickname = nickname;
 	}
 
-	public String getCreateDate() {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		return sdf.format(createDate);
+	public Date getCreateDate() {
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		//return sdf.format(createDate);
+		return createDate;
 	}
 
 	public void setCreateDate(Date createDate) {
