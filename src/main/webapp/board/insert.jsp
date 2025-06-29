@@ -35,6 +35,7 @@
 				method : "post",
 				dataType : "html",
 				success : function(data) {
+					alert("게시글등록성공");
 					$(".outer").append(data);
 				},
 				error : function(xhr) {
