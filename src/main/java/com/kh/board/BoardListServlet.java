@@ -23,6 +23,7 @@ public class BoardListServlet extends HttpServlet {
 //		gsonStr = gsonStr.substring(1, gsonStr.length()-1); // [] 잘라내기
 //		request.setAttribute("boardList", boardList); // 어차피 세션에 데이터 있기때문에
 		// 리퀘스트 스코프에 두 번 넣어줄 필요가 없음
+		request.getSession().setAttribute("print", true);
 		request.getRequestDispatcher("/board/list.jsp").forward(request, response);
 	}
 

@@ -51,7 +51,7 @@
 						$(".outer").html(data);
 					},
 					error : function(xhr) {
-						console.log(xhr)
+						console.log(xhr);
 					}
 				});
 			});

@@ -24,8 +24,23 @@
 </table>
 <script>
 	$(function() {
-		$("#btn").click(function()) {
-			
-		};
+		$("#btn").click(function() {
+			$.ajax({
+				url : "<%=request.getContextPath()%>/board/insert",
+				data : {
+					title : $(":text[name=title]").val(),
+					nickname : $(":text[name=nickname]").val(),
+					content : $("textarea[name=content]").val()
+				},
+				method : "post",
+				dataType : "html",
+				success : function(data) {
+					$(".outer").append(data);
+				},
+				error : function(xhr) {
+					console.log(xhr);
+				}
+			});
+		});
 	});
 </script>

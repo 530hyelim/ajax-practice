@@ -3,7 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!-- 게시글 목록 페이지 -->
-<h2>일반게시판</h2>
+<c:if test="${print == true}">
+	<h2>일반게시판</h2>
+</c:if>
 <table class='list-table'>
 	<thead>
 		<tr>
