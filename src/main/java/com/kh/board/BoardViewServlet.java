@@ -16,6 +16,7 @@ public class BoardViewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 사용자가 전달한 게시판 번호를 바탕으로, List에서 게시판번호와 일치하는 게시판 정보를 검색
 		List<Board> list = (List<Board>)request.getSession().getAttribute("list");
 		for (Board b : list) {
 			if (b.getNo() == Integer.parseInt(request.getParameter("no"))) {

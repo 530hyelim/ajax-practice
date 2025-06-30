@@ -35,8 +35,10 @@
 				method : "post",
 				dataType : "html",
 				success : function(data) {
-					alert("게시글등록성공");
-					$(".outer").append(data);
+					//alert("게시글등록성공");
+					alert(data);
+					//$(".outer").append(data);
+					$("#list").click();
 				},
 				error : function(xhr) {
 					console.log(xhr);

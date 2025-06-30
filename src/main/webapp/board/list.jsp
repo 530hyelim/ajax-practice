@@ -18,7 +18,7 @@
 	<tbody>
 		<!-- 반복문으로 등록된 게시글들를 출력하는곳입니다. -->
 		<c:forEach var="board" items="${list}">
-			<tr>
+			<tr onclick="displayData(${board.no})">
 				<td>${board.no}</td>
 				<td>${board.title}</td>
 				<td>${board.nickname}</td>
@@ -30,7 +30,7 @@
 	</tbody>
 </table>
 <script>
-$(function() {
+<%-- $(function() {
 	$(".list-table tr").click(function(e) {
 		$.ajax({
 			url : "<%=request.getContextPath()%>/board/view",
@@ -45,7 +45,7 @@ $(function() {
 			}
 		});
 	});
-});
+}); --%>
 </script>
 
 

@@ -56,6 +56,20 @@
 				});
 			});
 		});
+		function displayData(boardNo) {
+			$.ajax({
+				url : "${pageContext.request.contextPath}/board/view",
+				data : {
+					no : boardNo
+				},
+				success : function(data) {
+					$(".outer").html(data);
+				},
+				error : function(err) {
+					console.log(err);
+				}
+			});
+		}
 	</script>
 </body>
 </html>
